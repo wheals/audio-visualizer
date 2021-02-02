@@ -1,10 +1,9 @@
 import { expect } from 'chai';
 import { createSandbox } from 'sinon';
-import { renderAudioVisualizer, Config, PCM_FORMAT } from '../index';
+import { renderAudioVisualizer, Config } from '../index';
 import fs from 'fs';
 import { Writable, Readable } from 'stream';
 import { ChildProcessWithoutNullStreams } from 'child_process';
-import * as image from '../image';
 import * as audio from '../audio';
 import * as video from '../video';
 
@@ -18,7 +17,6 @@ describe('index', function () {
     sandbox.stub(audio, 'createAudioBuffer').returns(
       new Promise(resolve => resolve({ audioBuffer: Buffer.from([1, 1]), sampleRate: 2 }))
     );
-    sandbox.stub(image, 'getImageColor').returns({ red: 0, green: 0, blue: 0 });
 
     let exitCallback: Function = () => { };
     let childProcessStream: unknown = {
@@ -40,9 +38,6 @@ describe('index', function () {
     const config: Config = {
       audio: {
         path: 'audioPath'
-      },
-      image: {
-        path: 'example/media/background.png'
       },
       outVideo: {
         path: 'outVideoPath',

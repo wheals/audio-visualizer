@@ -1,11 +1,8 @@
 {
-  "image": {
-    "path": "example/media/background.png"
-  },
   "audio": {
-    "path": "example/media/audio.wav"
+    "path": "./silicon_sample.wav"
   },
   "outVideo": {
-    "path": "example/media/out.mp4"
+    "path": "example/media/smallbars.mp4"
   }
 }

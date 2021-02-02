@@ -38,7 +38,7 @@
     "rimraf": "^3.0.2",
     "sinon": "^7.5.0",
     "ts-node": "^8.5.0",
-    "ts-node-dev": "^1.0.0-pre.43",
+    "ts-node-dev": "^1.1.1",
     "typescript": "^3.7.2"
   },
   "husky": {
@@ -47,14 +47,11 @@
     }
   },
   "dependencies": {
-    "@jimp/bmp": "^0.9.3",
-    "@jimp/png": "^0.9.3",
-    "@types/bmp-js": "^0.1.0",
+    "@rkesters/dsp.ts": "0.0.3",
     "@types/ffmpeg-static": "^2.0.0",
     "@types/node": "^12.12.3",
     "@types/sinon": "^7.5.0",
-    "bmp-js": "^0.1.0",
-    "ffmpeg-static": "^2.6.0",
-    "jimp": "^0.9.3"
+    "canvas": "^2.6.1",
+    "ffmpeg-static": "^2.6.0"
   }
 }
